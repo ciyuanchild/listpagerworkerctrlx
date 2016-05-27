@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>listpagerctrlx demo</title>
+<script type="text/javascript" src="../js/listpagerworkerctrlx.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+// -->列表的翻页控制
+var keywordListParam = [];
+for(var index=0;index < 1000;index++) {
+	keywordListParam.push('keyword'+index);
+}
+var listPagerCtrl = new ListPagerCtrlx(keywordListParam,10);  // 要请求的列表，以每页10个的数量进行翻页
+//console.log(listPagerCtrl.initPage(5));
+//console.log(listPagerCtrl.nextPage());
+
+// -->单页面的工作者数量控制
+var workerCtrl = new WorkerCtrlx();
+workerCtrl.runAutoNextPage(10,listPagerCtrl,function(itemList,workerQueue){  // 一个网页最多一次10个ajax请求
+	var setTimeoutFunc = function(){
+		console.log(itemList);
+		workerQueue.pop();
+		console.log(workerQueue);
+	};
+	setTimeout(setTimeoutFunc,1000*Math.random());
+	/*
+	$.ajax({
+	    type: "GET",
+	    url: reqUrlConfig.loginUrl,
+	    data: {},
+	    async: true,
+	    dataType: "json",
+	    success: function(data) {
+	    	workerQueue.pop();
+	    	if(data.staus==1){
+	    		
+	    	}
+	    	else{
+	    		
+	    	}
+        },
+	    error: function (xhr, textStatus, errorThrown) {
+	    	workerQueue.pop();
+	    	if(xhr.status=='301'){
+	    		
+	    	}
+	    }
+	});
+	*/
+});
+</script>
+</body>
+</html>
