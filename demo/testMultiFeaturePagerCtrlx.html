@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MultiFeaturePagerCtrlx demo</title>
+<script type="text/javascript" src="../js/multifeaturepagerctrlx.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var featureList = [{'currIndex':0,'stack':['.com1','.com2','.com3']},{'currIndex':0,'stack':['keyword1','keyword2','keyword3']}];
+var multiFeaturePagerCtrlx = new MultiFeaturePagerCtrlx(featureList,2);
+console.log(multiFeaturePagerCtrlx.initPage(2));
+console.log(multiFeaturePagerCtrlx.nextPage());
+console.log(multiFeaturePagerCtrlx.nextPage());
+console.log(multiFeaturePagerCtrlx.nextPage());
+</script>
+</body>
+</html>
