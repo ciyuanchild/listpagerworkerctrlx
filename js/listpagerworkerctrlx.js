@@ -1,11 +1,12 @@
-// ------>测试  test<------
-//// -->列表的翻页控制
-//var keywordListParam = [];
+
 /**
  * 翻页控制，页面执行者数量控制
  * create time 	:	2016-06-03
  * author		:	zhouzhian
  */
+// ------>测试  test<------
+//// -->列表的翻页控制
+//var keywordListParam = [];
 //for(var index=0;index < 1000;index++) {
 //	keywordListParam.push('keyword'+index);
 //}
