@@ -1,14 +1,15 @@
 /**
 
-* 翻页控制，页面执行者数量控制
+    翻页控制，页面执行者数量控制x
 
-* create time     :    2016-06-03
+    create time : 2016-06-03
 
-* author        :    zhouzhian
+    author : zhouzhian
 
 */
 
-// ------>测试  test<------
+// ------>测试  test <------
+
 
 // -->列表的翻页控制
 
