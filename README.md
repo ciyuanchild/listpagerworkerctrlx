@@ -1,12 +1,10 @@
-
 /**
 
-* 翻页控制，页面执行者数量控制x
+    翻页控制，页面执行者数量控制x
 
+    create time : 2016-06-03
 
-* create time     :    2016-06-03
-
-* author        :    zhouzhian
+    author : zhouzhian
 
 */
 
